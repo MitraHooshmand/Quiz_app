@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/game.css" />
 
     <title>Playing Game</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <span id="loader"></span>
+    <div id="container">
+      <div class="header">
+        <div>
+          <p>Question Number:</p>
+          <span id="question-number">1</span>
+        </div>
+
+        <div>
+          <p>Scores:</p>
+          <span id="score">0</span>
+        </div>
+      </div>
+      <div id="question-box">
+        <h3 id="question-text">question will be here</h3>
+        <button class="answer-text">answer</button>
+        <button class="answer-text">answer</button>
+        <button class="answer-text">answer</button>
+        <button class="answer-text">answer</button>
+      </div>
+      <button id="finish-button">Finish</button>
+      <button id="next-button">Next</button>
+    </div>
+  </body>
 </html>
