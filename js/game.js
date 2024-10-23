@@ -1,14 +1,19 @@
 "use strict";
+import reformingTheData from "./helper.js";
 const loader = document.getElementById("loader");
 const container = document.getElementById("container");
 let formattedData = null;
 const URL =
   "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple";
 
+/////
+
 const fetchData = async function () {
   const responce = await fetch(URL);
   const json = await responce.json();
-  formattedData = json;
+  reformingTheData(json.results);
+  formattedData = reformingTheData(json.results);
+  console.log(formattedData);
   removeLoader();
 };
 const removeLoader = function () {
